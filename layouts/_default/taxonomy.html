@@ -1,8 +1,22 @@
 {{ define "main" }}
+{{ if eq .Title "Tags" }}
+<h3>{{ i18n "tags.title" }}</h3>
+<ul id="posts">
+    {{ range .Site.Taxonomies.tags.ByCount }}
+    <li>
+        <a href="{{ "tags/" | relURL }}{{ .Name | urlize }}">
+            {{ .Name }}
+            <small>{{ .Count }}</small>
+        </a>
+    </li>
+    {{ end }}
+</ul>
+{{ else }}
 <h3>{{ .Title }}</h3>
 <ul id="posts">
-{{- range .Pages }}
+    {{- range .Pages }}
     {{ .Render "li" }}
-{{- end }}
+    {{- end }}
 </ul>
+{{ end }}
 {{ end }}

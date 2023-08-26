@@ -14,4 +14,10 @@
     </header>
     {{- .Content -}}
 </article>
+{{ with .Site.RegularPages.Prev . }}
+<div><small>{{ i18n "post.prev" }}: <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></small></div>
+{{ end }}
+{{ with .Site.RegularPages.Next . }}
+<div><small>{{ i18n "post.next" }}: <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></small></div>
+{{ end }}
 {{ end }}
