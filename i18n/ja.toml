@@ -4,16 +4,28 @@
 [posts]
 
 [posts.title]
-other = "投稿"
+other = "ページ"
 
 [posts.date]
-other = "06-01-02"
+other = "06-01-02 Mon"
 
 
 [post]
 
 [post.created]
-other = "2006年 1月2日"
+other = "2006年 1月2日 Monday"
 
 [post.updated]
-other = "2006年 1月2日"
+other = "2006年 1月2日 Monday"
+
+[post.next]
+other = "次"
+
+[post.prev]
+other = "前"
+
+
+[tags]
+
+[tags.title]
+other = "タグ"
