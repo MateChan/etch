@@ -11,6 +11,9 @@
             {{ end }}
         {{- end -}}
         </div>
+        {{- if isset .Params "author" -}}
+        <div>{{- .Param "author" -}}</div>
+        {{- end -}}
     </header>
     {{- .Content -}}
 </article>
