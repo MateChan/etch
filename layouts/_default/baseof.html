@@ -3,9 +3,13 @@
     {{- partial "head.html" . -}}
     <body>
         {{- partial "header.html" . -}}
-        <main id="content">
+        <main id="content" class="transition-fade">
         {{- block "main" . }}{{- end }}
         </main>
         {{- partial "footer.html" . -}}
+        <script src="https://unpkg.com/swup@4"></script>
+        <script>
+            const swup = new Swup({ containers: ["main"] });
+        </script>
     </body>
 </html>
